@@ -14,11 +14,17 @@
 		<hr><hr>
 -->		
 		<table>
+		<thead>
+			<tr>
+				<td>Character</td>
+				<td>Parents</td>
+			</tr>
+		</thead>
 		<tbody data-ng-repeat="char in characters | filter:searchText">
 			<tr><td>{{char.name}}</td>
 			<td>
 			<div data-ng-repeat="parent in char.parents" style="display:inline;">
-				 - {{parent}}
+				 {{parent}},
 			</div>
 			</td></tr>
 		</tbody>
