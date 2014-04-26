@@ -7,7 +7,9 @@
 </head>
 <body>
 	<div id='content' ng-app='MyTutorialApp' ng-controller='MainController'>
-		{{understand}}
+		<div data-ng-repeat="dat in data">
+			{{dat.EventName}}
+		</div>
 	</div>
 </body>
 </html>
