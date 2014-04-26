@@ -9,7 +9,7 @@
 	<div id='content' ng-app='MyTutorialApp' ng-controller='MainController'>
 		Enter your search text here - <input type='text' ng-model='searchText' /><br>
 		<div data-ng-repeat="dat in data | filter:searchText">
-			<a href="{{dat.TrailerURL}}">{{dat.EventName}}</a>{{dat.ShowDate}}
+			<a href="{{dat.TrailerURL}}" target="_blank">{{dat.EventName}}</a>{{dat.ShowDate}}
 		</div>
 	</div>
 </body>
