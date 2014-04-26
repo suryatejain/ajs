@@ -2,6 +2,7 @@
 <head>
 	<title>Learning AngularJS</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="app.js" type="text/javascript"></script>
 	<script src="maincontroller.js" type="text/javascript"></script>
 	<style>
@@ -9,18 +10,25 @@
 		border:1px solid black;
 		}
 	</style>
+	<script>
+		function toggleview(){
+			$("#t1").toggle();
+			$("#t2").toggle();
+		}
+	</script>
 </head>
 <body>
 	<div id='content' ng-app='MyTutorialApp' ng-controller='MainController'>
+		Select your page - <select onchange="toggleview();"><option>BookMyShow</option><option>GameOfThrones</option></select>
 		Enter your search text here - <input type='text' ng-model='searchText' /><br><br><br>
-		<table style="border:1px solid black;border-collapse:collapse;">
+		<table id="t1" style="border:1px solid black;border-collapse:collapse;">
 		<tbody data-ng-repeat="dat in data | filter:searchText">
 			<tr><td><a href="{{dat.TrailerURL}}" target="_blank">{{dat.EventName}}</a></td><td>{{dat.ShowDate}}</td></tr>
 		</tbody>
 		</table>
 		<hr><hr>
 
-		<table style="border:1px solid black;border-collapse:collapse;">
+		<table id="t2" style="border:1px solid black;border-collapse:collapse;">
 		<thead>
 			<tr>
 				<td>Character</td>
