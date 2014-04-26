@@ -37,7 +37,9 @@
 			</tr>
 		</thead>
 		<tbody data-ng-repeat="char in characters | filter:searchText">
-			<tr><td>{{char.name}}</td>
+			<tr><td>{{char.name}}<br><img src="{{char.portrait}}" height="42" width="42">
+				
+			</td>
 			<td>
 			<div data-ng-repeat="parent in char.parents" style="display:inline;">
 				 {{parent}},
