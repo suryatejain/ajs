@@ -18,6 +18,8 @@
 			<tr>
 				<td>Character</td>
 				<td>Parents</td>
+				<td>Siblings</td>
+				<td>Close Friends</td>
 			</tr>
 		</thead>
 		<tbody data-ng-repeat="char in characters | filter:searchText">
@@ -26,7 +28,18 @@
 			<div data-ng-repeat="parent in char.parents" style="display:inline;">
 				 {{parent}},
 			</div>
-			</td></tr>
+			</td>
+			<td>
+			<div data-ng-repeat="parent in char.siblings" style="display:inline;">
+				 {{parent}},
+			</div>
+			</td>
+			<td>
+			<div data-ng-repeat="parent in char.closeFriends" style="display:inline;">
+				 {{parent}},
+			</div>
+			</td>			
+			</tr>
 		</tbody>
 		</table>
 	</div>
