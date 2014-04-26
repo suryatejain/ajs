@@ -13,8 +13,9 @@
 		</div>
 		<hr><hr>
 		<div data-ng-repeat="char in characters | filter:searchText">
-			<div data-ng-repeat="parent in char.parents">
-				{{char.name}} - {{parent}}
+			{{char.name}}
+			<div data-ng-repeat="parent in char.parents" style="display:inline;">
+				 - {{parent}}
 			</div>
 		</div>
 	</div>
