@@ -11,6 +11,10 @@
 		<div data-ng-repeat="dat in data | filter:searchText">
 			<a href="{{dat.TrailerURL}}" target="_blank">{{dat.EventName}}</a>{{dat.ShowDate}}
 		</div>
+		<hr><hr>
+		<div data-ng-repeat="char in characters | filter:searchText">
+			{{char.name}}
+		</div>
 	</div>
 </body>
 </html>
