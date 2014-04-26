@@ -3,6 +3,6 @@ app.controller("MainController", function($scope,$http){
     var url = 'data.JSON';
     $http.get(url).then(function(response){
         console.log(response)
-        $scope.data = resonse.data;
+        $scope.data = response.data;
     })
 });
